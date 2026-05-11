@@ -1,0 +1,15 @@
+
+SEPSIS FLAG CORRELATION ANALYSIS - SUMMARY
+
+Dataset: 15,000 ICU patients
+Sepsis flag positive: 3,029 (20.2%)
+Overall mortality: 3,418 (22.8%)
+
+Key Findings:
+1. Sepsis flag correlation with death: 0.093 (very weak)
+2. Patients with sepsis flag die at 30.5% vs 20.8% without
+3. Vital signs show NO difference between sepsis flag groups
+4. Mortality prediction is more clinically valuable
+
+Conclusion:
+mortality_label will be the prediction target for this project.
