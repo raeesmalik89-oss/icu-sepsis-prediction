@@ -1,0 +1,38 @@
+
+FINAL MODEL RESULTS - ICU MORTALITY PREDICTION
+================================================
+
+DATASET: 15,000 ICU patients
+FEATURES USED: 22 clinical measurements (all available)
+TARGET: mortality_label (0=survived, 1=died)
+
+BEST MODEL: Logistic Regression (Balanced)
+
+FINAL METRICS:
+- Accuracy: 60.3%
+- Precision: 30.5%
+- Recall: 57.7%
+- F1 Score: 39.9%
+- ROC-AUC: 63.8%
+- CV-AUC: 64.4% (consistent across 5 folds)
+
+COMPARISON WITH LIMITED FEATURES:
+- Limited features ROC-AUC: 58.1%
+- All features ROC-AUC: 63.8%
+- Improvement: +5.7%
+
+KEY FINDINGS:
+1. Adding more features improved predictions
+2. Logistic Regression outperformed complex models
+3. Still not clinically ready (needs 85%+ ROC-AUC)
+4. Vital signs + basic clinical data insufficient
+
+RECOMMENDATIONS FOR PRODUCTION:
+1. Add laboratory results (creatinine, bilirubin, platelets)
+2. Include time-series trends (not just averages)
+3. Collect treatment data (antibiotics, vasopressors)
+4. Use ensemble of multiple models
+5. Validate on external hospital data
+
+LEARNING OUTCOME:
+Machine learning on structured clinical data can predict mortality better than chance (64% vs 50%), but real-world deployment requires richer data sources and prospective validation.
