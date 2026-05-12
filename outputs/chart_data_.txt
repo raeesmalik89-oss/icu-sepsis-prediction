@@ -1,0 +1,31 @@
+
+CHART DATA for understanding
+=======================================
+
+Chart 1: Age Distribution
+- Average age: 54.0 years
+- Age range: 18 to 90 years
+- Most common age group: 50-60 years
+
+Chart 2: Sepsis Distribution
+- Sepsis patients: 3,029 (20.2%)
+- Non-sepsis patients: 11,971 (79.8%)
+
+Chart 3: Heart Rate Comparison
+- Sepsis patients: 100.1 bpm
+- Non-sepsis patients: 100.0 bpm
+- Difference: 0.1 bpm (negligible)
+
+Chart 4: Temperature Comparison
+- Sepsis patients: 37.5°C
+- Non-sepsis patients: 37.5°C
+- Difference: 0.0°C (identical)
+
+Chart 5: Mortality Rate
+- Overall mortality: 3,418 (22.8%)
+- Survived: 11,582 (77.2%)
+
+Chart 6: Mortality by Sepsis Flag
+- No sepsis patients died: 20.8%
+- Sepsis patients died: 30.5%
+- Difference: 9.7% higher for sepsis patients

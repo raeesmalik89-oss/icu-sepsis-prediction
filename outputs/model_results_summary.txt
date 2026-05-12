@@ -1,0 +1,28 @@
+
+MODEL TRAINING RESULTS - ICU SEPSIS PROJECT
+============================================
+
+Dataset: 15,000 ICU patients
+Training set: 12,000 patients (80%)
+Test set: 3,000 patients (20%)
+Features used: age, heart rate, temperature, oxygen, respiratory rate, blood pressure, comorbidity, lactate, SOFA score, APACHE score
+
+MODEL PERFORMANCE COMPARISON
+============================================
+
+(Your results will appear here after training)
+
+INTERPRETATION
+============================================
+
+1. Accuracy: Percentage of correct predictions overall
+2. Precision: When model predicts death, how often correct
+3. Recall: Percentage of actual deaths the model found
+4. F1 Score: Balance between precision and recall
+5. ROC-AUC: Model's ability to distinguish survivors from non-survivors
+
+BEST MODEL SELECTION
+============================================
+
+The model with highest ROC-AUC will be selected for production.
+This model will be saved as models/best_model.pkl
