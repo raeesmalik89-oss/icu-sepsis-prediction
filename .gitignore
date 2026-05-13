@@ -1,0 +1,40 @@
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Sensitive data
+*.pkl
+*.db
+*.log
+*.key
+*.pem
+
+# Credentials and tokens
+.env
+.kaggle/
+kaggle.json
+*.token
+secrets/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Large data files (if any)
+*.zip
+*.tar.gz
+
+# Security reports (optional)
+trivy_report.txt
+security_report.txt
