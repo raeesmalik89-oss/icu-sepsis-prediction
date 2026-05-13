@@ -29,14 +29,6 @@ jobs:
         python -c "import os; assert os.path.exists('data/icu_patient_data.csv'), 'Data file missing'"
         echo "✅ Data file exists"
     
-    - name: Test model file exists
-      run: |
-        if [ -f "models/best_model.pkl" ]; then
-          echo "✅ Model file exists"
-        else
-          echo "⚠️ Model file not found (will be created during training)"
-        fi
-    
     - name: Test Python imports
       run: |
         python -c "import pandas; import sklearn; import joblib"
@@ -48,14 +40,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Run Trivy vulnerability scanner
-      uses: aquasecurity/trivy-action@0.28.0
-      with:
-        scan-type: 'fs'
-        scan-ref: '.'
-        format: 'table'
-        exit-code: '0'
-        severity: 'HIGH,CRITICAL'
+    - name: Install Trivy
+      run: |
+        wget https://github.com/aquasecurity/trivy/releases/download/v0.52.2/trivy_0.52.2_Linux-64bit.deb
+        sudo dpkg -i trivy_0.52.2_Linux-64bit.deb
+        trivy --version
+    
+    - name: Run Trivy security scan
+      run: |
+        trivy fs --severity HIGH,CRITICAL --exit-code 0 .
 
   final-status:
     needs: [test, security-scan]
