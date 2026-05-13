@@ -1,0 +1,30 @@
+
+ICU MORTALITY PREDICTION - RESULTS SUMMARY
+
+DATASET: 15,000 ICU patients
+FEATURES: Age, heart rate, temperature, oxygen, blood pressure, comorbidity, lactate, SOFA, APACHE
+
+BEST MODEL: Logistic Regression (Balanced)
+
+RESULTS:
+- Accuracy: 55.5% (poor)
+- Recall: 57.0% (finds 57% of deaths)
+- ROC-AUC: 58.1% (barely better than random)
+
+CONCLUSION:
+Vital signs alone cannot reliably predict ICU mortality.
+Clinical prediction requires additional data: lab results, medications, time-series trends.
+
+LIMITATIONS OF THIS STUDY:
+1. Used only averaged vital signs (no trends)
+2. Missing key clinical data (lab results, treatments)
+3. Class imbalance (77% survivors, 23% deaths)
+
+FUTURE WORK:
+1. Add laboratory results (creatinine, bilirubin, platelets)
+2. Use time-series data (trends over 24-48 hours)
+3. Include treatment information (antibiotics, ventilation)
+4. Collect more balanced dataset
+
+LEARNING OUTCOME:
+This project demonstrates that machine learning on limited features produces poor predictions. Real-world AI systems require comprehensive clinical data.

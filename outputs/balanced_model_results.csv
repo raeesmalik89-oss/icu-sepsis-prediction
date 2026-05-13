@@ -1,0 +1,4 @@
+Model,Accuracy,Precision,Recall,F1 Score,ROC-AUC
+Random Forest (Balanced),77.1%,42.9%,0.9%,1.7%,53.8%
+Logistic Regression (Balanced),55.5%,27.2%,57.0%,36.9%,58.1%
+XGBoost (Balanced),64.8%,24.8%,26.6%,25.7%,53.6%
